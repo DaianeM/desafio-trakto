@@ -1,0 +1,54 @@
+<div class="container-fluid vh-100 p-0 opening__container">
+  <app-header></app-header>
+
+  <div class="d-flex justify-content-center opening__round-cards">
+    <div class="d-flex justify-content-evenly align-self-center  vw-100">
+
+      <a routerLink="/courseware">
+        <div class="d-flex flex-column align-items-center justify-content-evenly">
+          <h1 class="opening__label">MateriaL didático</h1>
+          <hr class="opening__line" [ngStyle]="{'border-top': '4px solid #4173CD'}">
+          <div class="d-flex mt-4 rounded-circle align-items-center justify-content-center opening__card">
+            <div class="d-flex rounded-circle align-items-center justify-content-center opening__card-internal"
+              [style.background-image]="'url(' + cardBg1 + ')'">
+              <img class="opening__image-books" [src]="cardImg1" alt="livros">
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <div class="d-flex flex-column align-items-center justify-content-evenly">
+        <h1 class="opening__label">Quiz</h1>
+        <hr class="opening__line" [ngStyle]="{'border-top': '4px solid #1DC763'}">
+        <div class="d-flex mt-4 rounded-circle align-items-center justify-content-center opening__card">
+          <div class="d-flex rounded-circle align-items-center justify-content-center opening__card-internal"
+            [style.background-image]="'url(' + cardBg2 + ')'">
+            <img class="opening__image-medal" [src]="cardImg2" alt="medalha">
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column align-items-center justify-content-evenly">
+        <h1 class="opening__label">Desenho</h1>
+        <hr class="opening__line" [ngStyle]="{'border-top': '4px solid #F6B5FF'}">
+        <div class="d-flex mt-4 rounded-circle align-items-center justify-content-center opening__card">
+          <div class="d-flex rounded-circle align-items-center justify-content-center opening__card-internal"
+            [style.background-image]="'url(' + cardBg3 + ')'">
+            <img class="opening__image-paint" [src]="cardImg3" alt="pintura">
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column align-items-center justify-content-evenly">
+        <h1 class="opening__label">Youtube</h1>
+        <hr class="opening__line" [ngStyle]="{'border-top': '4px solid #FF0000'}">
+        <div class="d-flex mt-4 rounded-circle align-items-center justify-content-center opening__card">
+          <div class="d-flex rounded-circle align-items-center justify-content-center opening__card-internal"
+            [style.background-image]="'url(' + cardBg4 + ')'">
+            <img class="opening__image-youtube" [src]="cardImg4" alt="youtube">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

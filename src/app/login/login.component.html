@@ -1,0 +1,27 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100 vw-100 login">
+  <div class="container d-flex justify-content-center align-items-center flex-column">
+    <div>
+      <img class="login__logo" [src]="logoPath" alt="logomarca">
+      <h1 class="login__title">Olá, faça login em sua conta.</h1>
+
+      <div class="mb-3 mt-3">
+        <label for="email" class="form-label login__label" [ngClass]="{ 'focused': isEmailFocused }">Email</label>
+        <input [(ngModel)]="user.email" type="email" class="form-control login__input" id="email"
+          placeholder="name@example.com" (focus)="onEmailFocus()" (blur)="onEmailBlur()">
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label login__label" [ngClass]="{ 'focused': isPasswordFocused }">Senha</label>
+        <input [(ngModel)]="user.password" type="password" class="form-control login__input" id="password"
+          placeholder="••••••••••" (focus)="onPasswordFocus()" (blur)="onPasswordBlur()">
+      </div>
+      <button type="submit" class="btn mt-3 login__btn" (click)="handleLogin()" [disabled]="loading">
+        <span *ngIf="!loading">Entrar</span>
+        <span *ngIf="loading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+        <span *ngIf="loading">Entrando...</span>
+      </button>
+      <div *ngIf="loginError" class="mt-4 p-2 alert alert-danger align-items-center justify-content-center">Credenciais
+        incorretas</div>
+    </div>
+  </div>
+</div>

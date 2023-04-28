@@ -1,0 +1,54 @@
+.login{
+  background-color: #EFF2F9;
+}
+.login__logo{
+  width: 125px;
+  height: 30px;
+}
+.login__title{
+  font-size: 20px;
+  color: #04183E;
+  font-weight: 700;
+  margin-top: 40px;
+}
+.login__input{
+  border-radius: 4px;
+  background: #FFFFFF;
+  width: 300px;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #04183E;
+}
+.login__input::placeholder {
+  color: #D0DAEF;
+  font-size: 14px;
+  font-weight: 400;
+}
+.form-control:focus {
+  border-color: #66BFFF;
+  box-shadow: none !important;
+}
+.login__label{
+  font-size: 12px;
+  font-weight: 400;
+  color: #04183E;
+}
+.focused {
+  color: #0095FF;
+}
+.login__btn{
+  width: 300px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #1DC763;
+  font-size: 14px;
+  color: #FFFFFF;
+  border: none;
+}
+.btn.active,
+.btn:active {
+  background-color: #1DC763;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+}

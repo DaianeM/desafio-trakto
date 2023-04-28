@@ -1,0 +1,77 @@
+<div class="container-full vh-100 overflow-auto courseware__container">
+  <header>
+    <nav class="container-fluid navbar navbar-expand-lg w-100 courseware__header-container">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="/courseware">
+          <img [src]="logoPath" alt="logomarca" class="d-inline-block align-text-top courseware__header-logo">
+          <div class="ms-auto d-flex align-items-center">
+            <a type="button" class="courseware__btn-return" href="/opening">
+              <img [src]="logoutIcon" alt="trocar ambiente" class="courseware__icon-logout">
+              Trocar de ambiente
+            </a>
+          </div>
+        </a>
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link align-items-center" href="/courseware">
+              <img [src]="calendarIcon" alt="calendario" class="courseware__header-icon">
+              <span class="ms-2 courseware__header-calendar-date">22/04/2023</span>
+            </a>
+          </li>
+          <span class="mx-4 courseware__header-separator">|</span>
+          <li class="nav-item">
+            <a class="nav-link align-items-center" href="/courseware">
+              <img [src]="notificationIcon" alt="notificação" class="courseware__header-icon">
+            </a>
+          </li>
+          <span class="mx-4 courseware__header-separator">|</span>
+          <li class="nav-item dropdown d-flex flex-row align-items-center">
+            <img [src]="userImg" alt="Foto do usuário" width="30" height="30" class="bg-cover rounded-circle">
+            <a class="nav-link dropdown-toggle courseware__header-icon-down" href="/courseware" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false"></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Link1</a></li>
+              <li><a class="dropdown-item" href="#">Link2</a></li>
+              <li><a class="dropdown-item" href="#">Link3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid d-flex justify-content-center align-items-center courseware__header-banner">
+  </div>
+
+  <div class="container-fluid flex-column courseware__section">
+    <div class="courseware__section-header">
+      <div class="courseware__section-header-text-start">Semana 06/02 até 28/02</div>
+      <a class="courseware__section-btn-all" href="/courseware/seall">Ver todo conteúdo</a>
+    </div>
+    <p class="courseware__section-title">Material didático</p>
+    <p class="courseware__section-subtitle">Acesse seus últimos designs.</p>
+
+    <div class="row flex-nowrap courseware__scroll">
+      <div *ngFor="let courseware of coursewares" class="col-3 col-sm-6 courseware__card-horizontal-scroll p-0">
+        <a class="courseware__card" [href]="'https://editor.trakto.io/presentation/p/' + courseware.id" target="_blank">
+          <div class="courseware__card-image" [style.background-image]="'url(' + courseware.thumbs.high + ')'">
+            <div *ngIf="courseware.pages && courseware.pages.length >= 1" class="mb-2 m-3 courseware__card-page">
+              {{courseware.pages.length}} {{courseware.pages.length === 1 ? 'página' : 'páginas'}}</div>
+          </div>
+          <p class="courseware__card-label mt-2">{{courseware.title}}</p>
+        </a>
+      </div>
+    </div>
+    <div *ngIf="coursewares.length === 0" class="d-flex flex-column justify-content-center align-items-center"
+      [style.color]="'#354564'">
+      Você não possui nenhum design.
+      <button type="button" class="btn btn-outline-primary">
+        <a href="https://dashboard.trakto.io/" target="_blank">Criar design
+        </a>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- <div class="container-fluid flex-column courseware__section">
+  </div> -->
