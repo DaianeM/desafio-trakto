@@ -1,27 +1,29 @@
-# TraktoEdu
+# Desafio Trakto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
-## Development server
+## Objetivo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Desenvolver uma aplicação front-end utilizando o framework Angular 2+, consumindo a API da Trakto.
 
-## Code scaffolding
+## Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de começar, você precisa ter o Node.js instalado em seu computador. Você pode baixá-lo no site oficial: https://nodejs.org/en.
 
-## Build
+## Instalação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Faça o download do código-fonte do projeto do Github;
+- Abra o prompt de comando e navegue até a pasta raiz do projeto;
+- Digite o comando `npm install` para instalar todas as dependências do projeto;
 
-## Running unit tests
+## Executando o projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Após a instalação das dependências, digite o comando `ng serve` para iniciar o servidor de desenvolvimento;
+- Quando o servidor estiver iniciado, abra um navegador e acesse o endereço: `http://localhost:4200`. Se tudo estiver correto, você deverá ver a aplicação Angular sendo executada no navegador;
 
-## Running end-to-end tests
+## Testando a aplicação
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Para você conseguir fazer login é necessário possuir uma conta grátis no site da Trakto. Disponível no endereço: `https://dashboard.trakto.io/`;
+- Crie alguns designs para melhor experiência;
+- Com as mesmas credenciais faça login na aplicação de teste;
+- Para parar o servidor, volte para o prompt de comando e pressione `CTRL+C`;
